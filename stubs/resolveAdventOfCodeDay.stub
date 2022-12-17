@@ -1,0 +1,41 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Commands\abstractCommand;
+
+class DummyClass extends abstractCommand
+{
+    const YEAR = {{ year }};
+    const DAY = {{ day }};
+
+    /**
+     * The signature of the command.
+     *
+     * @var string
+     */
+    protected $signature = 'dummy:command';
+
+    /**
+     * The description of the command.
+     *
+     * @var string
+     */
+    protected $description = 'Advent Of Codde {{ year }} day {{ day }}';
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setAnswers(null, null);
+    }
+
+
+    public function resolvePart1(bool $sample = false)
+    {
+    }
+
+
+    public function resolvePart2(bool $sample = false)
+    {
+    }
+}
